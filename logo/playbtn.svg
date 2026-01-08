@@ -1,0 +1,8 @@
+<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circular green background -->
+  <circle cx="30" cy="30" r="28" fill="#00a651"/>
+  
+  <!-- Play icon centered with padding -->
+  <path d="M22 18C21 18 20 19 20 20V40C20 41 21 42 22 42C22.5 42 23 41.9 23.5 41.7L40.5 32.7C41.5 32.2 42 31.2 42 30C42 28.8 41.5 27.8 40.5 27.3L23.5 18.3C23 18.1 22.5 18 22 18Z"
+        fill="black"/>
+</svg>

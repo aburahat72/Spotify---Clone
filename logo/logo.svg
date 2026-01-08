@@ -1,0 +1,8 @@
+<svg width="70" height="50" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="50" fill="#030303ff"/>
+  <path d="M30 40c15-5 25-5 40 0" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M30 50c12-4 28-4 40 0" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M30 60c10-3 30-3 40 0" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+  <text x="120" y="60" font-family="Arial, sans-serif" font-size="25" fill="white" font-weight="bold">Spotify</text>
+</svg>

@@ -1,0 +1,30 @@
+{
+  "playlists": [
+    {
+      "title": "Tallwinder",
+      "folder": "ncs",
+      "image": "https://a10.gaanacdn.com/gn_img/albums/2lV3d1WRgB/V3dloLJL3R/size_l.jpg",
+      "description": "Royalty free music"
+    },
+    {
+      "title": "Chill Vibes",
+      "folder": "chilvibes",
+       "image": "https://i.scdn.co/image/ab67616d00001e028fa95e3e74799cb0b2a1fb57",
+      "description": "Relaxing tracks"
+    }
+    ,
+    {
+      "title": "best Modes",
+      "folder": "chilvibes",
+       "image": "https://i.scdn.co/image/ab67616d00001e025be30e0d058181d80d470511",
+      "description": "Relaxing tracks"
+    },
+    {
+      "title": "Tallwinder",
+      "folder": "chilvibes",
+       "image": "https://a10.gaanacdn.com/gn_img/albums/2lV3d1WRgB/V3dloLJL3R/size_l.jpg",
+      "description": "Relaxing tracks"
+    }
+    
+  ]
+}

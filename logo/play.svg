@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="25" height="25" fill="none">
+  <!-- Outer Circle -->
+  <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2" />
+
+  <!-- Centered Play Button -->
+  <path d="M16 13 L28 20 L16 27 Z"
+        fill="currentColor" />
+</svg>

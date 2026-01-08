@@ -1,0 +1,61 @@
+/* .border {
+  border: 2px solid red;
+  margin: 2px;
+} */
+
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.items-align {
+  align-items: center;
+}
+.bg-blackishgrey {
+  background-color: rgb(62, 58, 58);
+  color: white;
+}
+.bg-black {
+  background-color: black;
+}
+.invert {
+  filter: invert(1);
+}
+.rounded {
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  /* border: 1px solid goldenrod; */
+}
+.m-1 {
+  margin: 5px;
+}
+.p-1 {
+  padding: 11px;
+}
+
+
+/* here iam writing the code for css scroll bar codes */
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Firefox */
+ * {
+  scrollbar-width: thin;
+  scrollbar-color: #3a3a3a #1a1a1a;
+}
