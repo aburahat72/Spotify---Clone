@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>Spotify clone</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="utility.css" />
@@ -13,10 +13,14 @@
       <div class="left border">
         <button class="close-btn">✕</button>
         <div class="home bg-blackishgrey rounded p-1">
-          <div class="flex" style="width: 80%;"><img src="logo/logo.svg" alt="logo" /></div>
+          <div class="flex" style="width: 80%">
+            <img src="logo/logo.svg" alt="logo" />
+          </div>
           <ul style="font-size: 13px">
             <li><img class="invert" src="logo/home.svg" alt="home" />Home</li>
-            <li><img class="invert" src="logo/search.svg" alt="search" />search</li>
+            <li>
+              <img class="invert" src="logo/search.svg" alt="search" />search
+            </li>
           </ul>
         </div>
         <div class="library bg-blackishgrey rounded p-1">
@@ -25,9 +29,7 @@
             <h3>Your Library</h3>
           </div>
           <div class="songlists">
-            <ul>
-             
-            </ul>
+            <ul></ul>
           </div>
           <div class="footer">
             <div>
@@ -89,7 +91,11 @@
               alt="hamburger"
             />
             <img class="arrow" src="logo/angle-left-icon.svg" alt="leftarrow" />
-            <img class="arrow" src="logo/angle-right-icon.svg" alt="rightarrow" />
+            <img
+              class="arrow"
+              src="logo/angle-right-icon.svg"
+              alt="rightarrow"
+            />
           </div>
           <div class="buttons">
             <button class="Signup-btn">Signup</button>
@@ -114,7 +120,11 @@
               <!-- 2nd part  -->
               <div>
                 <div class="songsbuttons">
-                  <img id="previous" src="logo/prevplay.svg" alt="previousbtn" />
+                  <img
+                    id="previous"
+                    src="logo/prevplay.svg"
+                    alt="previousbtn"
+                  />
                   <img id="play" src="logo/play.svg" alt="playbutton" />
                   <img id="next" src="logo/nextplay.svg" alt="nextbutton" />
                 </div>

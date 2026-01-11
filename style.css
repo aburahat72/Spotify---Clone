@@ -341,8 +341,23 @@ html, body {
   cursor: pointer;
   z-index: 1001;
 }
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
 
-@media (max-width: 768px) {
+@-ms-viewport {
+  width: device-width;
+}
+
+@media screen and (max-width: 768px) {
+  html, body{
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative;
+
+  }
   .container {
     height: 100vh;
     overflow: hidden;
