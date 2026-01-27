@@ -120,6 +120,8 @@ const playmusic = (track, pause = false) => {
   document.querySelector(".songtime").innerHTML = "0:00 / 0:00";
   //reset the seekbar position
   document.querySelector(".circle").style.left = "0%";
+  // add this line showplaybar in the mobile screen after the song load successfully
+  document.querySelector(".playbar").style.display = "flex";
   updateLibraryPlayIcons();
 };
 
@@ -149,14 +151,22 @@ function updateLibraryPlayIcons() {
 async function main() {
   // Display the card
   await displayplaylists();
-  // load the song by default
-  const response = await fetch("./info.json");
-  const data = await response.json();
+  const isMobile = window.innerWidth <= 768;
+  if(!isMobile){
 
-  if (data.playlists.length > 0) {
-    const firstPlaylist = data.playlists[0];
-    await loadPlaylistSongs(firstPlaylist.folder, firstPlaylist.title);
+    // load the song by default
+    const response = await fetch("./info.json");
+    const data = await response.json();
+    if (data.playlists.length > 0) {
+      const firstPlaylist = data.playlists[0];
+      await loadPlaylistSongs(firstPlaylist.folder, firstPlaylist.title);
+    }
+
+  } else {
+    console.log("mobile detected waiting for the user click");
+    document.querySelector(".playbar").style.display = "none";
   }
+
   // get control with their ids
   // Attach the event listeners to the play previous and next btn
   const play = document.getElementById("play");
@@ -178,7 +188,6 @@ async function main() {
   //  add the Event listener to the previous btn
   const previous = document.getElementById("previous");
   previous.addEventListener("click", () => {
-    console.log("prev btn was the clicked");
     if (currentIndex > 0) {
       currentIndex--;
     } else {

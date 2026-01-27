@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,701;1,701&display=swap");
-html, body {
+html,
+body {
   background-color: black;
   color: white;
   height: 100%;
@@ -214,15 +215,10 @@ html, body {
 
 /* here to start the playbtn */
 .playbar {
-  /* left: 353px; */
   display: flex;
   position: fixed;
   bottom: 0;
-  /* left: 0; */
   width: 77.5%;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* border: 1px solid #255adf; */
   border-radius: 10px;
   filter: invert(1);
   background-color: #dad5d5;
@@ -343,7 +339,7 @@ html, body {
 }
 @viewport {
   width: device-width;
-  zoom: 1.0;
+  zoom: 1;
 }
 
 @-ms-viewport {
@@ -351,12 +347,12 @@ html, body {
 }
 
 @media screen and (max-width: 768px) {
-  html, body{
+  html,
+  body {
     width: 100% !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
     position: relative;
-
   }
   .container {
     height: 100vh;
@@ -369,13 +365,13 @@ html, body {
     z-index: 1000;
     width: 85vw;
     max-width: 300px;
-    height: 85vh;
+    height: 100vh;
     background-color: black;
     overflow-y: auto;
   }
   .library {
     position: relative;
-    height: calc(94vh - 180px);
+    height: calc(98vh - 200px);
   }
   .right {
     width: 100vw;
@@ -416,6 +412,7 @@ html, body {
     margin: 0;
     z-index: 1000;
   }
+
   .songinfo {
     font-size: 12px;
     text-align: center;
@@ -507,20 +504,57 @@ html, body {
   .footer div {
     font-size: 7px;
   }
+  /* Mobile & Tablet */
+@media (max-width: 768px) {
+  .right {
+    height: 100vh !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .cardcontainer {
+    max-height: 100% !important;
+    height: 75vh !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
+    gap: 15px !important;
+  }
+  
+  /* Playbar hidden by default on mobile */
+  .playbar {
+    display: none !important;
+  }
+  
+  /* Show playbar only when it has content */
+  .playbar:has(.songinfo:not(:empty)) {
+    display: flex !important;
+  }
+}
   @media (max-width: 480px) {
-    .right{
-      height: calc(100vh - 125px);
+    .Login-btn {
+      width: 80px;
+      padding: 8px;
+      font-size: 10px;
+    }
+    .Login-btn:hover {
+      font-size: 12px;
+      font-weight: bold;
+      padding: 10px;
+      width: 82px;
+    }
+    .right {
+      height: calc(100vh - 185px);
     }
     .cardcontainer {
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 15px;
     }
     .card {
+      height: 205px;
       width: 130px;
     }
 
     .card img {
-      height: 130px;
+      height: 100px;
     }
 
     .play {
@@ -533,7 +567,7 @@ html, body {
     .playbar {
       height: 100px;
       bottom: env(safe-area-inset-bottom);
-      left: 2.5px;
+      left: 1px;
     }
     .abovebar {
       height: 10px;
@@ -542,6 +576,17 @@ html, body {
       margin: 0;
       padding: 0;
       gap: 0px;
+    }
+    .seekbar {
+      height: 2px;
+      width: 90%;
+      background-color: black;
+      position: absolute;
+      bottom: 5px;
+      border-radius: 10px;
+      margin: 5px;
+      left: 10px;
+      cursor: pointer;
     }
 
     .songsbuttons {
