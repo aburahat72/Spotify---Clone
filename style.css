@@ -6,7 +6,6 @@ body {
   height: 100%;
   overflow: hidden;
 }
-
 /* universal margin & padding */
 * {
   margin: 0;
@@ -151,11 +150,15 @@ body {
   /* direct it will applied the inside the card of the element */
   padding-top: 5px;
 }
-.card img {
+.card > img {
   /* required 100% width of the image not to be cropped */
   width: 100%;
   /* object fit property will the fit the content and image inside the card */
-  object-fit: contain;
+  object-fit: cover;
+
+  height: 200px;
+  /* object-fit: cover; */
+  border-radius: 10px;
 }
 
 /* yet to start the hover play btn in the card */
@@ -509,7 +512,7 @@ body {
     height: 100vh !important;
     margin-bottom: 0 !important;
   }
-  
+
   .cardcontainer {
     max-height: 100% !important;
     height: 63vh !important;
@@ -517,93 +520,92 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
     gap: 15px !important;
   }
-  
+
   /* Playbar hidden by default on mobile */
   .playbar {
     display: flex !important;
   }
-  
+
   /* Show playbar only when it has content */
   .playbar:has(.songinfo:not(:empty)) {
     display: flex !important;
   }
 }
-  @media (max-width: 480px) {
-    .Login-btn {
-      width: 80px;
-      padding: 8px;
-      font-size: 10px;
-    }
-    .Login-btn:hover {
-      font-size: 12px;
-      font-weight: bold;
-      padding: 10px;
-      width: 82px;
-    }
-    .right {
-      height: calc(100vh - 185px);
-    }
-    .cardcontainer {
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-      gap: 15px;
-    }
-    .card {
-      height: 205px;
-      width: 130px;
-    }
-
-    .card img {
-      height: 100px;
-    }
-
-    .play {
-      top: 105px;
-    }
-
-    .header > * {
-      padding: 10px;
-    }
-    .playbar {
-      height: 100px;
-      bottom: env(safe-area-inset-bottom);
-      left: 1px;
-    }
-    .abovebar {
-      height: 10px;
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-      padding: 0;
-      gap: 0px;
-    }
-    .seekbar {
-      height: 2px;
-      width: 90%;
-      background-color: black;
-      position: absolute;
-      bottom: 5px;
-      border-radius: 10px;
-      margin: 5px;
-      left: 10px;
-      cursor: pointer;
-    }
-
-    .songsbuttons {
-      gap: 10px;
-    }
-
-    .songsbuttons img {
-      width: 24px;
-      height: 24px;
-    }
-
-    .songinfo {
-      font-size: 10px;
-    }
-        .songlists {
-        height: 340px !important;
-    }
+@media (max-width: 480px) {
+  .Login-btn {
+    width: 80px;
+    padding: 8px;
+    font-size: 10px;
+  }
+  .Login-btn:hover {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px;
+    width: 82px;
+  }
+  .right {
+    height: calc(100vh - 185px);
+  }
+  .cardcontainer {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+  }
+  .card {
+    height: 205px;
+    width: 130px;
   }
 
+  .card img {
+    height: 100px;
+  }
+
+  .play {
+    top: 105px;
+  }
+
+  .header > * {
+    padding: 10px;
+  }
+  .playbar {
+    height: 100px;
+    bottom: env(safe-area-inset-bottom);
+    left: 1px;
+  }
+  .abovebar {
+    height: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 0px;
+  }
+  .seekbar {
+    height: 2px;
+    width: 90%;
+    background-color: black;
+    position: absolute;
+    bottom: 5px;
+    border-radius: 10px;
+    margin: 5px;
+    left: 10px;
+    cursor: pointer;
+  }
+
+  .songsbuttons {
+    gap: 10px;
+  }
+
+  .songsbuttons img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .songinfo {
+    font-size: 10px;
+  }
+  .songlists {
+    height: 340px !important;
+  }
+}
 
 /* yet to work on hamburger functionality in css file for the responsibe in mobile */
