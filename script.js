@@ -100,7 +100,7 @@ function secondsTominutesSeconds(seconds) {
 
   return `${formattedMinutes}:${formattedSeconds}`;
 }
-const playmusic = (track, pause = false) => {
+const playmusic = (track, pause = true) => {
   currentSong.src = "./songs/" + encodeURIComponent(track);
   currentIndex = songs.indexOf(track);
   // get the song name without folder and without .mp3
@@ -113,9 +113,11 @@ const playmusic = (track, pause = false) => {
     .replace(/-/g, " "); // Replace hyphens with spaces
 
   if (!pause) {
-    currentSong.play();
-    play.src = "logo/pause.svg";
-  }
+  currentSong.play();
+  play.src = "logo/pause.svg";
+} else {
+  play.src = "logo/play.svg";
+}
   document.querySelector(".songinfo").innerHTML = songName;
   document.querySelector(".songtime").innerHTML = "0:00 / 0:00";
   //reset the seekbar position
@@ -152,7 +154,6 @@ async function main() {
   // Display the card
   await displayplaylists();
   const isMobile = window.innerWidth <= 768;
-  if(!isMobile){
 
     // load the song by default
     const response = await fetch("./info.json");
@@ -161,12 +162,6 @@ async function main() {
       const firstPlaylist = data.playlists[0];
       await loadPlaylistSongs(firstPlaylist.folder, firstPlaylist.title);
     }
-
-  } else {
-    console.log("mobile detected waiting for the user click");
-    document.querySelector(".playbar").style.display = "none";
-  }
-
   // get control with their ids
   // Attach the event listeners to the play previous and next btn
   const play = document.getElementById("play");

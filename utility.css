@@ -33,6 +33,13 @@
 .p-1 {
   padding: 11px;
 }
+.p-0{
+  padding: 0px;
+
+}
+.m-0{
+  margin: 0px;
+}
 
 
 /* here iam writing the code for css scroll bar codes */

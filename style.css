@@ -68,7 +68,7 @@ body {
 .library {
   /* min-height: 70vh; */
   position: relative;
-  height: calc(100vh - 180px);
+  height: calc(100vh - 130px);
 }
 .footer {
   display: flex;
@@ -505,7 +505,6 @@ body {
     font-size: 7px;
   }
   /* Mobile & Tablet */
-@media (max-width: 768px) {
   .right {
     height: 100vh !important;
     margin-bottom: 0 !important;
@@ -513,7 +512,7 @@ body {
   
   .cardcontainer {
     max-height: 100% !important;
-    height: 75vh !important;
+    height: 63vh !important;
     display: grid !important;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
     gap: 15px !important;
@@ -521,7 +520,7 @@ body {
   
   /* Playbar hidden by default on mobile */
   .playbar {
-    display: none !important;
+    display: flex !important;
   }
   
   /* Show playbar only when it has content */
@@ -601,7 +600,10 @@ body {
     .songinfo {
       font-size: 10px;
     }
+        .songlists {
+        height: 340px !important;
+    }
   }
-}
+
 
 /* yet to work on hamburger functionality in css file for the responsibe in mobile */
